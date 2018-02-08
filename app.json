@@ -1,6 +1,6 @@
 {
-  "name": "Heroku 201",
-  "description": "Attach your data services",
+  "name": "Heroku Connect Demo",
+  "description": "Deploy a configured Heroku Connect instance to an app flexible enough for ",
   "keywords": [
     "java",
     "data",
