@@ -1,3 +1,3 @@
 #!/bin/bash
 
-heroku connect:import pae-demo.json
+# heroku connect:import pae-demo.json
