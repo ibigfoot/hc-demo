@@ -5,13 +5,22 @@
     "java",
     "data",
     "postgres",
-    "connect",
-    "redis"
+    "connect"
   ],
   "website": "https://www.heroku.com",
   "addons": [
-    "heroku-redis",
     "heroku-postgresql",
     "herokuconnect"
-  ]
+  ],
+    "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-cli"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ],
+ "environments" : {
+  	"test": {}
+  }
 }

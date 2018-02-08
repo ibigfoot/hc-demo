@@ -22,12 +22,12 @@ public class Module extends FrameworkModule {
     	if(ninjaProperties.isProd()) {
     		try {
     			URI dbUri = new URI(ninjaProperties.get("heroku.db.connection"));
-                String username = dbUri.getUserInfo().split(":")[0];
-                String password = dbUri.getUserInfo().split(":")[1];
-                int port = dbUri.getPort();
+            String username = dbUri.getUserInfo().split(":")[0];
+            String password = dbUri.getUserInfo().split(":")[1];
+            int port = dbUri.getPort();
 
-                String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ":" + port + dbUri.getPath() + "?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory";
-        		
+            String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ":" + port + dbUri.getPath() + "?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory";
+    		
         		((NinjaPropertiesImpl)ninjaProperties).setProperty("db.connection.url", dbUrl);
         		((NinjaPropertiesImpl)ninjaProperties).setProperty("db.connection.username", username);
         		((NinjaPropertiesImpl)ninjaProperties).setProperty("db.connection.password", password);
